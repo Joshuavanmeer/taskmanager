@@ -1,0 +1,27 @@
+<h1>Please add a new task</h1>
+<div id="form-container">
+    <form (ngSubmit)="submitForm()" [formGroup]="taskCreatorForm" autocomplete="off" novalidate>
+        <!-- Task input field ---------------------------------->
+        <div class="input-container">
+            <input formControlName="newTask" type="text" placeholder="new task">
+            <span
+                *ngIf="taskCreatorForm.controls['newTask'].hasError('required') && taskCreatorForm.controls['newTask'].touched"
+                class="error-msg"
+                [@errorMsg]
+                >Please enter a valid task
+            </span>
+        </div>
+        <!-- category select ----------------------------------->
+        <div class="input-container">
+            <select (change)="newCategoryRequest($event)" formControlName="category">
+                <option *ngFor="let category of categories" value="{{category.content.name}}">{{category.content.name}}</option>
+                <option>+ Add new Category</option>
+            </select>
+        </div>
+        <!-- Submit button ------------------------------------->
+        <div class="input-container">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<tm-input-prompt (close)="closePrompt($event)" (addedCategory)="rollbackForm($event)" *ngIf="promptActive"></tm-input-prompt>

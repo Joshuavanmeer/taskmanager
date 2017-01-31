@@ -1,0 +1,14 @@
+<ul id="task-list-container" (click)="handleClick($event)" (change)="taskChecked($event)">
+    <li *ngFor="let task of tasks" id="{{task.id}}" class="task-item" [@listAnimation]>
+        <ng-container *ngIf="task.content.category === activeCategory[0] || activeCategory[0] === 'all'">
+            <div>
+                <div [class.checked]="task.content.checked">
+                    <input type="checkbox" [checked]="task.content.checked">
+                    <p>{{task.content.task}} --- {{task.content.category}}</p>
+                    <button class="del-btn" type="button">Del</button>
+                    <button class="edit-btn" type="button">Edit</button>
+                </div>
+            </div>
+        </ng-container>
+    </li>
+</ul>

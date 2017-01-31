@@ -1,0 +1,16 @@
+.error-msg {
+    display: block;
+    color: red;
+}
+
+form {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.task-container {
+
+}
+
+

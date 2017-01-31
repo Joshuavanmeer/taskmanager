@@ -1,0 +1,4 @@
+<ul id="filters-container" (click)="handleClick($event)">
+    <li id="filter-all"><a>All</a></li>
+    <li *ngFor="let category of categories;" id="filter-{{category.content.name}}"><a>{{category.content.name}} || {{category.content.total}}</a></li>
+</ul>

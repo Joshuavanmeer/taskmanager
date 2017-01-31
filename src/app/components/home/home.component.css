@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#task-creator-container {
+    width: 100%;
+    border: 1px solid grey;
+    padding: 2%;
+}
+
+#task-list-container {
+    width: 80%;
+    margin-right: 4%;
+    padding: 2%;
+    border: 1px solid grey;
+}
+
+#filters-container {
+    width: 16%;
+    padding: 2%;
+    border: 1px solid grey;
+}
+
+

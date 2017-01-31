@@ -1,0 +1,7 @@
+<section (click)="handleClick($event)" id="input-prompt-container">
+    <button id='close-btn' type="button">close</button>
+    <form (ngSubmit)="newCategoryAdded()" novalidate autocomplete="off" [formGroup]="inputForm">
+        <label for="categoryName">Please add a category name</label>
+        <input id="categoryName" type="text" formControlName="newCategoryName">
+    </form>
+</section>
