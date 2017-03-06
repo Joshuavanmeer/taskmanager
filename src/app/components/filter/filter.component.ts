@@ -10,11 +10,13 @@ export class FilterComponent implements OnInit {
 
 
     private categories: any[];
+    private activeCategory: {name: string} = { name: 'all' }
 
 
     private handleClick(ev: any): void {
         const id = this.getRootId(ev.target).slice(7);
         if (id === 'all' || this.isValidFilter(id)) {
+            this.activeCategory.name = id;
             this.httpService.setActiveCategory(id);
         }
     }

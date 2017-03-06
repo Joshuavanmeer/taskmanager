@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,600');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,6 +28,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 ol, ul {
     list-style: none;
@@ -49,4 +55,25 @@ table {
 
 a {
     cursor: pointer;
+}
+
+
+#wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: #d73c5c;
+    background: -moz-linear-gradient(45deg,  #d73c5c 0%, #ca556d 50%, #a91b38 100%);
+    background: -webkit-linear-gradient(45deg,  #d73c5c 0%,#ca556d 50%,#a91b38 100%);
+    background: linear-gradient(45deg,  #d73c5c 0%,#ca556d 50%,#a91b38 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d73c5c', endColorstr='#a91b38',GradientType=1 );
+}
+
+
+/*=================================
+    base
+==================================*/
+
+
+h1 {
+    font-weight: 700;
 }

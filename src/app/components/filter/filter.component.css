@@ -1,3 +1,41 @@
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #d7d7d7;
+}
+
 li {
     margin: 10px 0;
+    width: 50%;
+}
+
+a {
+    padding: 2px 3px 2px 6px;
+    border-radius: 10px;
+}
+
+
+.counter {
+    display: inline-block;
+    height: 15px;
+    min-width: 15px;
+    background: #d7d7d7;
+    border-radius: 8px;
+    color: #3d3d3d;
+    margin: 0 0 0 5px;
+    text-align: center;
+    line-height: 14px;
+}
+
+
+.active-category {
+    background: grey;
 }

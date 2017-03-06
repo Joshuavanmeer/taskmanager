@@ -1,25 +1,43 @@
 .wrapper {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    color: white;
 }
 
-#task-creator-container {
-    width: 100%;
-    border: 1px solid grey;
-    padding: 2%;
-}
+
 
 #task-list-container {
-    width: 80%;
-    margin-right: 4%;
+    width: 100%;
     padding: 2%;
-    border: 1px solid grey;
+    background: #282425;
 }
 
 #filters-container {
-    width: 16%;
+    width: 100%;
     padding: 2%;
-    border: 1px solid grey;
+    background: #636363;
+}
+
+
+@media all and (min-width: 1000px) {
+
+    .wrapper {
+        padding: 40px 0 0;
+        flex-flow: row wrap;
+    }
+
+    #task-creator-container {
+        width: 100%;
+    }
+
+    #task-list-container {
+        width: 75%;
+    }
+
+    #filters-container {
+        width: 25%;
+    }
+
 }
 
 

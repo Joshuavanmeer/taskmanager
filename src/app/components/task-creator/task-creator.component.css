@@ -1,15 +1,121 @@
+#task-creator-wrapper {
+    width: 100%;
+    padding: 35px;
+    background: #282425;
+    border-bottom: 1px solid #3e3a3b;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+
+.grey-end {
+    color: #786c6f;
+    font-weight: 700;
+}
+
+
 .error-msg {
     display: block;
     color: red;
 }
 
+
 form {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+}
+
+input, select {
+    color: #282425;
+    height: 34px;
+    border-radius: 17px;
+    border: none;
+    width: 100%;
+    margin-bottom: 1px;
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+    padding: 0 0 0 15px;
 }
 
 
-.task-container {
+
+h1 {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #d73c5c;
+    color: white;
+    height: 35px;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+@media all and (min-width: 1000px) {
+
+    h1, button {
+        margin: 0 50px 0 0;
+    }
+
+    button {
+        border-radius: 0 17px 17px 0;
+        padding: 0 15px;
+        margin: 0;
+    }
+
+    #form-container {
+        width: 100%;
+    }
+
+    .input-container {
+        margin: 0 1px 0 0;
+    }
+
+    .input-container:first-child {
+        width: 60%;
+    }
+
+    .input-container:nth-child(2) {
+        width: 25%;
+    }
+
+    .input-container:nth-child(3) {
+        width: 15%;
+    }
+
+
+    #task-creator-wrapper, form {
+        flex-flow: row nowrap;
+    }
+
+    #task-creator-wrapper {
+        justify-content: space-between;
+        border-radius: 5px 5px 0 0;
+    }
+
+    form {
+        align-items: center;
+        width: 100%;
+    }
+
+    input:first-child {
+        border-radius: 17px 0 0 17px;
+    }
+
+    select {
+        border-radius: 0;
+    }
 
 }
 

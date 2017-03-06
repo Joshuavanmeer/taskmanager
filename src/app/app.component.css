@@ -1,5 +1,5 @@
 #home-container {
     margin: 0 auto;
-    width: 1000px;
-    background: lightblue;
+    max-width: 1000px;
+    width: 100%;
 }
