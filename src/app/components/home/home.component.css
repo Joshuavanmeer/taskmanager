@@ -8,18 +8,17 @@
 
 #task-list-container {
     width: 100%;
-    padding: 2%;
     background: #282425;
 }
 
 #filters-container {
     width: 100%;
-    padding: 2%;
     background: #636363;
 }
 
 
-@media all and (min-width: 1000px) {
+
+@media all and (min-width: 520px) and (max-width: 959px) {
 
     .wrapper {
         padding: 40px 0 0;
@@ -31,12 +30,35 @@
     }
 
     #task-list-container {
-        width: 75%;
+        width: 100%;
     }
 
     #filters-container {
-        width: 25%;
+        width: 100%;
     }
+
+}
+
+
+@media all and (min-width: 960px) {
+
+    .wrapper {
+        padding: 40px 0 0;
+        flex-flow: row wrap;
+    }
+
+    #task-creator-container {
+        width: 100%;
+    }
+
+    #task-list-container {
+        width: 80%;
+    }
+
+    #filters-container {
+        width: 20%;
+    }
+
 
 }
 

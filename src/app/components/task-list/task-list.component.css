@@ -1,9 +1,106 @@
-li div {
-    border: 1px solid grey;
-    padding: 10px;
+h5 {
+    font-size: 18px;
+    color: #abaaaa;
+    line-height: 22px;
+    margin: 10px 10px 10px 0;
 }
 
 
+li {
+
+}
+
+
+li:last-child {
+    margin-bottom: 50px;
+}
+
+
+li > div:first-child {
+    border-bottom: 1px solid #3b3839;
+    margin: 4% 4% 0;
+}
+
+.category {
+    color: #9b999a;
+    background: #4b4547;
+    font-size: 11px;
+    background: #4b4547;
+    font-weight: 700;
+    height: 17px;
+    line-height: 17px;
+    padding: 0 6px;
+    border-radius: 9px;
+}
+
+
+.top-group, .bottom-group {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.top-group {
+    align-items: center;
+    margin: 0 0 10px;
+}
+
+.bottom-group {
+    margin: 0 0 15px 0;
+}
+
+
+
 .checked {
-    background: red;
+    opacity: .3;
+}
+
+
+input[type=checkbox] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    background: url('../../../assets/icons/checkbox.svg');
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+}
+
+input[type=checkbox]:checked + label{
+    background: url('../../../assets/icons/checkbox_checked.svg');
+}
+
+
+.del-btn, .edit-btn, .seperator {
+    font-size: 11px;
+    font-weight: 600;
+    color: #686667;
+    text-transform: uppercase;
+    font-family: 'Hind', sans-serif;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+
+
+* {
+    transition: all .4s;
+}
+
+
+@media all and (min-width: 960px) {
+
+    h5 {
+        margin: 0;
+    }
+
+    .bottom-group {
+        margin: 0 0 15px 26px;
+    }
+
+    .category {
+        margin-left: 5px;
+    }
+
 }
