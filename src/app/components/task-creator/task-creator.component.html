@@ -6,10 +6,16 @@
             <div class="input-container">
                 <input formControlName="newTask" type="text" placeholder="new task">
                 <span
+                    *ngIf="taskCreatorForm.controls['newTask'].hasError('pattern')"
+                    class="error-msg"
+                    [@errorMsg]
+                    >Only numbers and letters allowed
+                </span>
+                <span
                     *ngIf="taskCreatorForm.controls['newTask'].hasError('required') && taskCreatorForm.controls['newTask'].touched"
                     class="error-msg"
                     [@errorMsg]
-                    >Please enter a valid task
+                >This field is not allowed to be empty
                 </span>
             </div>
             <!-- category select ----------------------------------->
@@ -27,3 +33,4 @@
     </div>
 </div>
 <tm-input-prompt (close)="closePrompt($event)" (addedCategory)="rollbackForm($event)" *ngIf="promptActive"></tm-input-prompt>
+<!--&& taskCreatorForm.controls['newTask'].touched-->

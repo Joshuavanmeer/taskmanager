@@ -47,7 +47,10 @@ export class TaskCreatorComponent implements OnInit {
 
     private buildForm(): void {
         this.taskCreatorForm = this.formBuilder.group({
-            newTask: ['', Validators.required],
+            newTask: ['', [
+                Validators.required,
+                Validators.pattern('[a-zA-Z 0-9]*')]
+            ],
             category: [this.defaultCategoryValue, Validators.required]
         });
     }

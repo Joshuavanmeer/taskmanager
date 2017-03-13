@@ -6,10 +6,6 @@ h5 {
 }
 
 
-li {
-
-}
-
 
 li:last-child {
     margin-bottom: 50px;
@@ -101,6 +97,10 @@ input[type=checkbox]:checked + label{
 
     .category {
         margin-left: 5px;
+    }
+
+    #task-list-container {
+        min-height: 80vh;
     }
 
 }

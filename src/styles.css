@@ -77,3 +77,31 @@ a {
 h1 {
     font-weight: 700;
 }
+
+
+button {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #d73c5c;
+    color: white;
+    height: 35px;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input, select {
+    color: #282425;
+    height: 34px;
+    border-radius: 17px;
+    border: none;
+    width: 100%;
+    margin-bottom: 1px;
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+    padding: 0 0 0 15px;
+}

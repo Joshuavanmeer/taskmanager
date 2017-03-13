@@ -1,11 +1,29 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, style, state, animate, transition, trigger } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { HttpService } from "../../shared/http.service";
 
 @Component({
-  selector: 'tm-input-prompt',
-  templateUrl: './input-prompt.component.html',
-  styleUrls: ['./input-prompt.component.css']
+    selector: 'tm-input-prompt',
+    templateUrl: './input-prompt.component.html',
+    styleUrls: ['./input-prompt.component.css'],
+    animations: [
+        trigger('errorMsg', [
+            state('show', style({
+                opacity: 1
+            })),
+            transition('void => *', [
+                style({
+                    opacity: 0
+                }),
+                animate(400)
+            ]),
+            transition('* => void', [
+                animate(400, style({
+                    opacity: 0
+                }))
+            ])
+        ])
+    ]
 })
 export class InputPromptComponent implements OnInit {
 
@@ -25,7 +43,7 @@ export class InputPromptComponent implements OnInit {
 
     private buildForm(): void {
         this.inputForm = this.formBuilder.group({
-            newCategoryName: ['', Validators.required]
+            newCategoryName: ['', [Validators.required, Validators.pattern('[a-zA-Z 0-9]*')]]
         });
     }
 

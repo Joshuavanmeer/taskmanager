@@ -1,7 +1,28 @@
 <section (click)="handleClick($event)" id="input-prompt-container">
-    <button id='close-btn' type="button">close</button>
-    <form (ngSubmit)="newCategoryAdded()" novalidate autocomplete="off" [formGroup]="inputForm">
-        <label for="categoryName">Please add a category name</label>
-        <input id="categoryName" type="text" formControlName="newCategoryName">
-    </form>
+    <div class="prompt-container">
+        <button id='close-btn' type="button">close</button>
+        <div class="content-container">
+            <form (ngSubmit)="newCategoryAdded()" novalidate autocomplete="off" [formGroup]="inputForm">
+                <label for="categoryName">Please add a category name</label>
+                <div class="form-content-container">
+                    <input id="categoryName" type="text" formControlName="newCategoryName">
+                    <div id="err-msg-container">
+                        <span
+                            *ngIf="inputForm.controls['newCategoryName'].hasError('pattern')"
+                            class="error-msg"
+                            [@errorMsg]
+                        >Only numbers and letters allowed
+                        </span>
+                        <span
+                            *ngIf="inputForm.controls['newCategoryName'].hasError('required') && inputForm.controls['newCategoryName'].touched"
+                            class="error-msg"
+                            [@errorMsg]
+                        >This field is not allowed to be empty
+                        </span>
+                    </div>
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>

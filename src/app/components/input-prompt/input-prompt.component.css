@@ -4,5 +4,94 @@
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+}
+
+
+#close-btn {
+    width: 70px;
+    color: #9b999a;
+    background: none;
+    right: 0;
+    position: absolute;
+}
+
+button[type=submit] {
+    width: 20%;
+    margin: 0;
+    border-radius: 0 18px 18px 0;
+}
+
+button {
+    margin: 0;
+}
+
+label {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.prompt-container {
+    width: 90%;
+    background: #4b4547;
+    color: #abaaaa;
+    border-radius: 5px;
+    position: relative;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,.9);
+}
+
+form div {
+    display: flex;
+}
+
+
+
+form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 70%;
+    margin: 75px 0;
+}
+
+input {
+    width: 80%;
+    border-radius: 18px 0 0 18px;
+}
+
+
+.error-msg {
+    font-weight: bold;
+    font-size: 12px;
+    color: red;
+    display: block;
+    margin: 5px 0 15px;
+}
+
+
+#err-msg-container {
+    order: 3;
+}
+
+.form-content-container {
+    flex-flow: row wrap;
+    display: flex;
+}
+
+@media all and (min-width: 960px) {
+
+    .prompt-container {
+        width: 60%;
+    }
+
 }

@@ -34,7 +34,7 @@ export class FilterComponent implements OnInit {
 
     private isValidFilter(id: string): boolean {
         const category = this.categories.filter(category => category.content.name === id)[0];
-        if (category.content.total > 0) return true;
+        if (category && category.content.total > 0) return true;
         else return false;
     }
 
