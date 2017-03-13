@@ -88,6 +88,10 @@ input {
     display: flex;
 }
 
+.prompt-container {
+    z-index: 1000;
+}
+
 @media all and (min-width: 960px) {
 
     .prompt-container {
